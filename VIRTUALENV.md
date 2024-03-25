@@ -64,4 +64,4 @@ FAILED getting_started/test_getting_started.py::test_start - AssertionError: You
 
 ## You're All Set
 
-That's it. Return to the Read Me file to configure your IDE.
+That's it. Return to the [Read Me](./README.md) file to configure your IDE.
