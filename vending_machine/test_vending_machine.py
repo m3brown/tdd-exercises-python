@@ -1,9 +1,11 @@
 import pytest
 from vending_machine import VendingMachine
+from payment_processor import PaymentProcessor
 
 @pytest.fixture(scope='function')
 def class_under_test():
-    return VendingMachine()
+    payment_processor = PaymentProcessor()
+    return VendingMachine(payment_processor)
 
 def test_release_change_when_no_coins_expect_no_change(class_under_test):
     # Arrange

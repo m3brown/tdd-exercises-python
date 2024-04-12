@@ -6,11 +6,9 @@ from payment_processor import PaymentProcessor
 PRICE = 2
 
 class VendingMachine:
-    _payment_processor: PaymentProcessor = None
-    _change_return = 0
-
-    def __init__(self):
-        self._payment_processor = PaymentProcessor()
+    def __init__(self, payment_processor: PaymentProcessor):
+        self._change_return = 0
+        self._payment_processor = payment_processor
         return
     
     def release_change(self):
