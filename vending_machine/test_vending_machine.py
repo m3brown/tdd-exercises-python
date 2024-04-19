@@ -2,7 +2,7 @@ import pytest
 from vending_machine import VendingMachine
 from payment_processor import PaymentProcessor
 
-@pytest.fixture(scope='function')
+@pytest.fixture
 def class_under_test():
     payment_processor = PaymentProcessor()
     return VendingMachine(payment_processor)

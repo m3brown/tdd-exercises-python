@@ -2,7 +2,7 @@ import pytest
 
 from another_machine import AnotherMachine
 
-@pytest.fixture()
+@pytest.fixture
 def machine_with_one_dollar():
     machine = AnotherMachine()
     machine.insert_coin()

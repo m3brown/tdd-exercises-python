@@ -3,17 +3,17 @@
 import pytest
 
 
-@pytest.fixture()
+@pytest.fixture
 def foo():
     return "FOO"
 
 
-@pytest.fixture()
+@pytest.fixture
 def bar(foo):
     return foo+"BAR"
 
 
-@pytest.fixture()
+@pytest.fixture
 def baz(foo, bar):
     return foo+bar+"BAZ"
 
