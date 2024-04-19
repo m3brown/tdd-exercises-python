@@ -3,6 +3,7 @@ class User:
         self.name = name
         self.email = email
 
+
 class UserManager:
     def __init__(self, user):
         self.user = user
@@ -10,6 +11,7 @@ class UserManager:
     def save(self):
         with open(f"{self.user.name}.txt", "w") as file:
             file.write(f"Name: {self.user.name}\nEmail: {self.user.email}")
+
 
 # Usage
 user = User("John Doe", "john.doe@example.com")

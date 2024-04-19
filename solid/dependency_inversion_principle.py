@@ -6,6 +6,7 @@ class DataFetcher:
         # Imagine fetching data from a database
         return "Data from the database"
 
+
 class ReportGenerator:
     def __init__(self):
         self.fetcher = DataFetcher()  # Direct dependency on a low-level module
@@ -13,6 +14,7 @@ class ReportGenerator:
     def create_report(self):
         data = self.fetcher.fetch_data()
         return f"Report with {data}"
+
 
 # Usage
 report_generator = ReportGenerator()

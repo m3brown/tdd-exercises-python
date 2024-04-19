@@ -9,6 +9,7 @@ def test_is_payment_made_when_no_payment_expect_false():
     # Assert
     assert actual == False
 
+
 def test_is_payment_made_when_full_payment_expect_true():
     # Arrange
     cut = PaymentProcessor()
@@ -18,6 +19,7 @@ def test_is_payment_made_when_full_payment_expect_true():
     actual = cut.is_payment_made(2)
     # Assert
     assert actual == True
+
 
 def test_is_payment_made_when_excess_payment_expect_true():
     # Arrange
@@ -31,6 +33,7 @@ def test_is_payment_made_when_excess_payment_expect_true():
     # Assert
     assert actual == True
 
+
 def test_refund_payment_when_no_payment_expect_no_refund():
     # Arrange
     cut = PaymentProcessor()
@@ -38,6 +41,7 @@ def test_refund_payment_when_no_payment_expect_no_refund():
     actual = cut.refund_payment()
     # Assert
     assert actual == 0
+
 
 def test_refund_payment_when_one_payment_expect_one_refund():
     # Arrange
@@ -47,6 +51,7 @@ def test_refund_payment_when_one_payment_expect_one_refund():
     actual = cut.refund_payment()
     # Assert
     assert actual == 1
+
 
 def test_is_payment_made_when_payment_processed_expect_false():
     # Arrange
@@ -59,6 +64,7 @@ def test_is_payment_made_when_payment_processed_expect_false():
     actual = cut.is_payment_made(3)
     # Assert
     assert actual == False
+
 
 def test_is_payment_made_when_payment_processed_twice_expect_false():
     # Arrange

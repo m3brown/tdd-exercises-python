@@ -1,5 +1,6 @@
 from payment_processor import PaymentProcessor
 
+
 def test_make_payment_when_no_payment_expect_payment_eq_0():
     # Arrange
     class_under_test = PaymentProcessor()
@@ -9,6 +10,7 @@ def test_make_payment_when_no_payment_expect_payment_eq_0():
 
     # Assert
     assert actual == 0
+
 
 def test_make_payment_when_payment_100_expect_payment_eq_100():
     # Arrange
@@ -21,6 +23,7 @@ def test_make_payment_when_payment_100_expect_payment_eq_100():
     # Assert
     assert actual == 100
 
+
 def test_is_payment_made_when_no_payment_expect_false():
     # Arrange
     class_under_test = PaymentProcessor()
@@ -30,6 +33,7 @@ def test_is_payment_made_when_no_payment_expect_false():
 
     # Assert
     assert actual == False
+
 
 def test_is_payment_made_when_payment_of_100_expect_true():
     # Arrange

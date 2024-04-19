@@ -1,27 +1,30 @@
 from typing import Protocol
 
+
 class Printer(Protocol):
-    def print_document(self, document: str) -> None:
-        ...
+    def print_document(self, document: str) -> None: ...
+
 
 class Scanner(Protocol):
-    def scan_document(self, document: str) -> None:
-        ...
+    def scan_document(self, document: str) -> None: ...
+
 
 class FaxMachine(Protocol):
-    def fax_document(self, document: str) -> None:
-        ...
+    def fax_document(self, document: str) -> None: ...
+
 
 class SimplePrinter:
     def print_document(self, document: str) -> None:
         print("Printing document.")
 
+
 class Photocopier:
     def print_document(self, document: str) -> None:
         print("Printing document.")
-    
+
     def scan_document(self, document: str) -> None:
         print("Scanning document.")
+
 
 class MultiFunctionPrinter:
     def print_document(self, document: str) -> None:
@@ -32,6 +35,7 @@ class MultiFunctionPrinter:
 
     def fax_document(self, document: str) -> None:
         print("Faxing document.")
+
 
 # Usage
 simple_printer = SimplePrinter()

@@ -11,6 +11,7 @@ class MultiFunctionDevice:
     def fax_document(self, document):
         pass
 
+
 class MultiFunctionPrinter(MultiFunctionDevice):
     def print_document(self, document):
         print("Printing document.")

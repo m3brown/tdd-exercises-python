@@ -6,7 +6,7 @@ class PaymentProcessor:
 
     def make_payment(self):
         self._coins += 1
-    
+
     def process_payment(self, price):
         self._coins -= price
 
@@ -19,4 +19,3 @@ class PaymentProcessor:
         coins = self._coins
         self._coins = 0
         return coins
-

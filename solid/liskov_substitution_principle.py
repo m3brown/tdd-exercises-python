@@ -6,13 +6,17 @@ class PaymentProcessor:
         """Process a payment for the given amount."""
         raise NotImplementedError("Each subclass must implement this method.")
 
+
 class CreditCardProcessor(PaymentProcessor):
     def __init__(self, card_number, cvv):
         self.card_number = card_number
         self.cvv = cvv
 
     def pay(self, amount):
-        print(f"Processing ${amount} payment via Credit Card for card number {self.card_number}")
+        print(
+            f"Processing ${amount} payment via Credit Card for card number {self.card_number}"
+        )
+
 
 class PaypalProcessor(PaymentProcessor):
     def __init__(self, email_address):
@@ -21,6 +25,7 @@ class PaypalProcessor(PaymentProcessor):
     def pay(self, amount):
         print(f"Processing ${amount} payment via PayPal for email {self.email_address}")
 
+
 class DeferredPaymentProcessor(PaymentProcessor):
     def __init__(self, account_id):
         self.account_id = account_id
@@ -28,7 +33,9 @@ class DeferredPaymentProcessor(PaymentProcessor):
 
     def pay(self, amount):
         if self.deferred:
-            raise Exception("Payment is deferred and cannot be processed immediately. Please approve first.")
+            raise Exception(
+                "Payment is deferred and cannot be processed immediately. Please approve first."
+            )
         print(f"Processing ${amount} payment for account {self.account_id}")
 
     def approve_payment(self):
@@ -41,6 +48,7 @@ def process_payment(processor, amount):
         processor.pay(amount)
     except Exception as e:
         print(f"Error: {e}")
+
 
 # Create instances of payment processors
 credit_card_processor = CreditCardProcessor("1234567890123456", "123")

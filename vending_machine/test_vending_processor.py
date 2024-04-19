@@ -4,10 +4,12 @@ from payment_processor import PaymentProcessor
 from vending_machine import VendingMachine
 
 
-@patch("payment_processor.PaymentProcessor.refund_payment") # mock arg 1
-def test_release_change_when_refund_payment_expect_patch_return_value(mock_refund_payment):
+@patch("payment_processor.PaymentProcessor.refund_payment")  # mock arg 1
+def test_release_change_when_refund_payment_expect_patch_return_value(
+    mock_refund_payment,
+):
     # Arrange
-    mock_refund_payment.return_value = 0    # patch the return
+    mock_refund_payment.return_value = 0  # patch the return
     payment_processor = PaymentProcessor()
     cut = VendingMachine(payment_processor)
     # Act
