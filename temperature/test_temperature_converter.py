@@ -1,4 +1,3 @@
-import pytest
 from temperature_converter import TemperatureConverter
 
 
